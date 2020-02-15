@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#CC1D1D</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="loginPageBackgroundColor">#E43F3F</color>
+    <color name="textInputOutlineColor">#5FDC00</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="colorLoginButton">#CC1D1D</color>
+    <color name="ripple">#ff746a</color>
+    <color name="white">#ffffff</color>
+    <color name="goodBlack">#2e2e2e</color>
+    <color name="transparent">#00000000</color>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "14038071316",
+    "firebase_url": "https://foodsetgo-8896f.firebaseio.com",
+    "project_id": "foodsetgo-8896f",
+    "storage_bucket": "foodsetgo-8896f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:14038071316:android:3905d9bf5e7e3206fb8f01",
+        "android_client_info": {
+          "package_name": "com.example.foodsetgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "14038071316-cll8kd99cg3iqi26l15v17dun5m3lqfl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.foodsetgo",
+            "certificate_hash": "0309b7f57ec2dff539bf2cd0a5ccb39ad852f576"
+          }
+        },
+        {
+          "client_id": "14038071316-icvpmcqp4mo04u2uj23uom0mfoj8sun9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1FoWv9rZUmlNtp7TP0JZO_vpT0ofLv78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "14038071316-icvpmcqp4mo04u2uj23uom0mfoj8sun9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

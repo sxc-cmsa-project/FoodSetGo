@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<!-- Other components and views -->
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/marginRight"
+        android:layout_marginLeft="@dimen/marginLeft">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/home_button"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/home_button"
+            android:paddingLeft="0dp"
+            android:fontFamily="@font/neue_haas_grotesk_medium_65"
+            android:textSize="20sp"
+            android:letterSpacing="0"
+            android:textColor="@color/goodBlack"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_location"
+            app:iconGravity="textEnd"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/offers_button"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_alignParentRight="true"
+            android:paddingRight="0dp"
+            android:text="@string/offers_button"
+            android:fontFamily="@font/neue_haas_grotesk_medium_65"
+            android:textSize="20sp"
+            android:letterSpacing="0"
+            android:textColor="@color/goodBlack"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_offers"
+            app:iconGravity="textStart"
+            />
+
+    </RelativeLayout>
+
+    <!--<androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/searchbar_bg"
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:layout_marginRight="@dimen/marginRight"
+
+        android:iconifiedByDefault="false"
+        app:queryHint="@string/search_hint"
+        />-->
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/marginLeft"
+        android:layout_marginRight="@dimen/marginRight"
+        android:background="@drawable/searchbar_bg"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/search_hint"
+        android:layout_marginBottom="5dp"
+        android:queryBackground="@color/transparent"
+        />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Card View"
+                android:layout_margin="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Card View"
+                android:layout_margin="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Card View"
+                android:layout_margin="30dp"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Card View"
+                        android:layout_margin="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Card View"
+                        android:layout_margin="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Card View"
+                        android:layout_margin="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Card View"
+                        android:layout_margin="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Card View"
+                        android:layout_margin="20dp"/>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Card View"
+                android:layout_margin="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Card View"
+                android:layout_margin="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Card View"
+                android:layout_margin="30dp"/>
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Card View"
+                        android:layout_margin="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Card View"
+                        android:layout_margin="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Card View"
+                        android:layout_margin="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Card View"
+                        android:layout_margin="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="Card View"
+                        android:layout_margin="20dp"/>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Card View"
+                android:layout_margin="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Card View"
+                android:layout_margin="30dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Card View"
+                android:layout_margin="30dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
+
+<com.google.android.material.bottomappbar.BottomAppBar
+    android:id="@+id/bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    app:navigationIcon="@drawable/ic_menu"
+    app:menu="@menu/bottomappbar_menu"
+    app:backgroundTint="@color/colorPrimaryDark"
+    app:fabCradleMargin="8dp"
+    app:fabCradleRoundedCornerRadius="10dp"
+    app:hideOnScroll="true"
+    />
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/fab"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_anchor="@id/bar"
+    android:src="@drawable/ic_cart"
+    android:backgroundTint="@color/goodBlack"
+    app:rippleColor="@color/white"
+    app:tint="@color/white"
+    app:maxImageSize="30dp"
+    app:borderWidth="0dp"
+    />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
