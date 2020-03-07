@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.foodsetgo.Commom.Common;
 import com.example.foodsetgo.Model.User;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -76,6 +77,7 @@ public class SignupActivity extends AppCompatActivity {
                                         User user = new User(nameEditText.getText().toString(), passwordEditText.getText().toString(),emailEditText.getText().toString());
                                         userTable.child(phoneEditText.getText().toString()).setValue(user);
                                         Intent i = new Intent(SignupActivity.this, HomeActivity.class);
+                                        Common.currentUser = user;
                                         startActivity(i);
                                         finish();
                                         Toast.makeText(SignupActivity.this, "Signed In", Toast.LENGTH_SHORT).show();

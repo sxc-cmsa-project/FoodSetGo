@@ -10,21 +10,26 @@ android:layout_height="match_parent">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/marginRight"
-        android:layout_marginLeft="@dimen/marginLeft">
+        android:layout_marginLeft="@dimen/marginLeft"
+        >
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/home_button"
+            android:id="@+id/location_button"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="?android:attr/selectableItemBackground"
-            android:text="@string/home_button"
+            android:text="@string/location_button"
             android:paddingLeft="0dp"
+            android:paddingTop="0dp"
             android:fontFamily="@font/neue_haas_grotesk_medium_65"
             android:textSize="20sp"
             android:letterSpacing="0"
@@ -42,6 +47,7 @@ android:layout_height="match_parent">
             android:background="?android:attr/selectableItemBackground"
             android:layout_alignParentRight="true"
             android:paddingRight="0dp"
+            android:paddingTop="0dp"
             android:text="@string/offers_button"
             android:fontFamily="@font/neue_haas_grotesk_medium_65"
             android:textSize="20sp"
@@ -54,185 +60,92 @@ android:layout_height="match_parent">
 
     </RelativeLayout>
 
-    <!--<androidx.appcompat.widget.SearchView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/searchbar_bg"
-        android:layout_marginLeft="@dimen/marginLeft"
-        android:layout_marginRight="@dimen/marginRight"
-
-        android:iconifiedByDefault="false"
-        app:queryHint="@string/search_hint"
-        />-->
     <SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="@dimen/marginLeft"
         android:layout_marginRight="@dimen/marginRight"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/searchbar_bg"
         android:iconifiedByDefault="false"
-        android:queryHint="@string/search_hint"
-        android:layout_marginBottom="5dp"
         android:queryBackground="@color/transparent"
-        />
+        android:queryHint="@string/search_hint" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular Places"
+        android:textSize="20sp"
+        android:textColor="@color/goodBlack"
+        android:fontFamily="@font/neue_haas_grotesk_medium_65"
+        android:layout_marginBottom="5dp"/>
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="110dp"
+        android:id="@+id/recycler_popualar"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="10dp" />
+
+    <!--<HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Card View"
-                android:layout_margin="30dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Card View"
-                android:layout_margin="30dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Card View"
-                android:layout_margin="30dp"/>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="70dp">
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="100dp"
+                app:cardElevation="0dp"
+                android:elevation="0dp"
+                android:layout_marginRight="10dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/res_logo"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:civ_border_width="2dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/aminia"
+                        app:civ_border_color="#FF000000"/>
 
                     <TextView
+                        android:id="@+id/res_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Card View"
-                        android:layout_margin="20dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Card View"
-                        android:layout_margin="20dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Card View"
-                        android:layout_margin="20dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Card View"
-                        android:layout_margin="20dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Card View"
-                        android:layout_margin="20dp"/>
+                        android:layout_gravity="center_horizontal"
+                        android:text="Aminia"
+                        android:textSize="20sp"
+                        android:textColor="@color/goodBlack"
+                        android:fontFamily="@font/neue_haas_grotesk_medium_65"/>
                 </LinearLayout>
 
-            </HorizontalScrollView>
+            </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Card View"
-                android:layout_margin="30dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Card View"
-                android:layout_margin="30dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Card View"
-                android:layout_margin="30dp"/>
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="70dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Card View"
-                        android:layout_margin="20dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Card View"
-                        android:layout_margin="20dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Card View"
-                        android:layout_margin="20dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Card View"
-                        android:layout_margin="20dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20dp"
-                        android:text="Card View"
-                        android:layout_margin="20dp"/>
-                </LinearLayout>
-
-            </HorizontalScrollView>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Card View"
-                android:layout_margin="30dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Card View"
-                android:layout_margin="30dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="20dp"
-                android:text="Card View"
-                android:layout_margin="30dp"/>
 
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+
+    </HorizontalScrollView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_menu"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
 
 </LinearLayout>
-
 
 <com.google.android.material.bottomappbar.BottomAppBar
     android:id="@+id/bar"
@@ -252,7 +165,7 @@ android:layout_height="match_parent">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:layout_anchor="@id/bar"
-    android:src="@drawable/ic_cart"
+    android:src="@drawable/ic_shopping_cart"
     android:backgroundTint="@color/goodBlack"
     app:rippleColor="@color/white"
     app:tint="@color/white"
