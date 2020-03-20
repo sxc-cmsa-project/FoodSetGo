@@ -2,14 +2,14 @@ package com.example.foodsetgo.Model;
 
 public class Item {
 
-    private String Name, Type, Rating, Price, Available, Course, Resid;
+    private String Name, Type, Rating, Price, Available, Course, Resid, Discount;
 
     public  Item()
     {
 
     }
 
-    public Item(String name, String type, String rating, String price, String available, String course, String resid) {
+    public Item(String name, String type, String rating, String price, String available, String course, String resid, String discount) {
         Name = name;
         Type = type;
         Rating = rating;
@@ -17,6 +17,7 @@ public class Item {
         Available = available;
         Course = course;
         Resid = resid;
+        Discount = discount;
     }
 
 
@@ -74,5 +75,13 @@ public class Item {
 
     public void setResid(String resid) {
         Resid = resid;
+    }
+
+    public String getDiscount() {
+        return Discount;
+    }
+
+    public void setDiscount(String discount) {
+        Discount = discount;
     }
 }

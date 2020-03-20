@@ -2,7 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="60dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="3dp"
     app:cardCornerRadius="5dp"
@@ -11,30 +11,47 @@
     android:layout_marginBottom="5dp">
 
     <RelativeLayout
+        android:id="@+id/backgroud_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/loginPageBackgroundColor">
 
         <ImageView
-            android:id="@+id/cart_item_logo"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/icon_veg"
-            android:layout_margin="5dp" />
+            android:id="@+id/delete_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_delete_24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/cart_item_logo"
-            android:layout_marginTop="5dp"
-            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:layout_toLeftOf="@id/delete_icon"
+            android:layout_centerVertical="true"
+            android:textSize="13sp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/foreground_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingLeft="10dp">
 
             <TextView
                 android:id="@+id/cart_item_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name"
+                android:gravity="center"
                 android:textSize="20sp"
                 android:textColor="@color/goodBlack"
+                android:layout_marginTop="5dp"
                 android:fontFamily="@font/neue_haas_grotesk_medium_65"/>
 
             <TextView
@@ -46,9 +63,9 @@
                 android:text="Price"
                 android:paddingBottom="5dp"
                 android:textSize="14sp"
-                android:textColor="@color/goodBlack"/>
+                />
 
-            <LinearLayout
+            <!--<LinearLayout
                 android:id="@+id/linear_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,54 +74,62 @@
                 android:gravity="right"
                 android:layout_alignParentRight="true"
                 android:paddingRight="10dp"
-                >
+                android:layout_marginTop="5dp">
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:id="@+id/cart_addBtn"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:background="?android:attr/selectableItemBackground"
                     app:icon="@drawable/ic_add"
                     android:padding="0dp"
-                    />
+                    android:layout_gravity="center" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/cart_item_count"
                     android:text="0"
-                    android:textSize="35sp"
-                    android:textAlignment="center"
-                    android:gravity="center"
-                    />
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="20sp" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
                     android:id="@+id/cart_removeBtn"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:background="?android:attr/selectableItemBackground"
                     app:icon="@drawable/ic_remove"
                     android:padding="0dp"
-                    />
+                    android:layout_gravity="center"/>
 
+            </LinearLayout>-->
 
-            </LinearLayout>
+            <TextView
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cart_item_count"
+                android:text="0"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="30sp"
+                android:textColor="@color/betterGreen"/>
 
             <TextView
                 android:id="@+id/cart_total_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linear_layout"
+                android:layout_below="@id/cart_item_count"
                 android:layout_alignParentRight="true"
                 android:gravity="right|bottom"
                 android:text="500"
                 android:textSize="18sp"
-                android:layout_marginRight="29dp"
+                android:textColor="@color/goodBlack"
+                android:layout_marginRight="10dp"
                 />
-
-        </RelativeLayout>
 
     </RelativeLayout>
 

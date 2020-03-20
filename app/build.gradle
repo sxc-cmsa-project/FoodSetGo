@@ -55,8 +55,10 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:3.0.0'
     implementation 'io.paperdb:paperdb:2.1'
-
+    implementation 'com.github.mancj:MaterialSearchBar:0.7.1'
     implementation 'com.github.eddydn:AdvancedNestedScrollView:1.1'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
 
 }
 apply plugin: 'com.google.gms.google-services'

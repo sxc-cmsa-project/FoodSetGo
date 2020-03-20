@@ -60,7 +60,7 @@ android:layout_height="match_parent">
 
     </RelativeLayout>
 
-    <SearchView
+    <!--<androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="40dp"
@@ -71,72 +71,38 @@ android:layout_height="match_parent">
         android:background="@drawable/searchbar_bg"
         android:iconifiedByDefault="false"
         android:queryBackground="@color/transparent"
-        android:queryHint="@string/search_hint" />
+        />-->
+    <com.mancj.materialsearchbar.MaterialSearchBar
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="0dp"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@color/transparent"
+        app:mt_speechMode="false"
+        app:mt_searchIconDrawable="@drawable/ic_search"
+        app:mt_hint="@string/search_hint"
+        app:mt_placeholder="@string/search_hint"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Popular Places"
+        android:text="@string/popular_places"
         android:textSize="20sp"
         android:textColor="@color/goodBlack"
         android:fontFamily="@font/neue_haas_grotesk_medium_65"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/recycler_popualar"
-        android:layout_marginLeft="0dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginRight="10dp" />
 
-    <!--<HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="100dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="70dp"
-                android:layout_height="100dp"
-                app:cardElevation="0dp"
-                android:elevation="0dp"
-                android:layout_marginRight="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/res_logo"
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        app:civ_border_width="2dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/aminia"
-                        app:civ_border_color="#FF000000"/>
-
-                    <TextView
-                        android:id="@+id/res_name"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Aminia"
-                        android:textSize="20sp"
-                        android:textColor="@color/goodBlack"
-                        android:fontFamily="@font/neue_haas_grotesk_medium_65"/>
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-        </LinearLayout>
-
-    </HorizontalScrollView>-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -150,7 +116,7 @@ android:layout_height="match_parent">
 <com.google.android.material.bottomappbar.BottomAppBar
     android:id="@+id/bar"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="50dp"
     android:layout_gravity="bottom"
     app:navigationIcon="@drawable/ic_menu"
     app:menu="@menu/bottomappbar_menu"

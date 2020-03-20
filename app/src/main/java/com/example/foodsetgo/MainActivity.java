@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Paper.init(this);
+        //Paper.init(this);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager()
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
                     .commit();
         }
 
-        String user = Paper.book().read(Common.USER_KEY);
+        /*String user = Paper.book().read(Common.USER_KEY);
         String pwd = Paper.book().read(Common.PWD_KEY);
 
         if(user!=null && pwd!=null)
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements NavigationHost {
                 startActivity(i);
                 finish();
             }
-        }
+        }*/
     }
 
     /*private void login(final String username, final String pwd)

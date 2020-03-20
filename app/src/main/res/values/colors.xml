@@ -11,4 +11,9 @@
     <color name="white">#ffffff</color>
     <color name="goodBlack">#2e2e2e</color>
     <color name="transparent">#00000000</color>
+    <color name="goodGreen">#20cf08</color>
+    <color name="betterGreen">#169e03</color>
+    <color name="goodGrey">#bfbdbd</color>
+    <color name="betterGrey">#9c9c9c</color>
+
 </resources>

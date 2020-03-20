@@ -43,9 +43,6 @@
                 android:id="@+id/phone_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_phone"
-                android:drawableLeft="@drawable/ic_phone"
-                android:drawableTint="@color/goodBlack"
                 android:inputType="phone"
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -63,12 +60,8 @@
                 android:id="@+id/password_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_lock"
-                android:drawableLeft="@drawable/ic_lock"
-                android:drawableTint="@color/goodBlack"
                 android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
-
 
         <!-- Snippet from "Add buttons" section goes here. -->
 

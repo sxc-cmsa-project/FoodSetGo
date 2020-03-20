@@ -2,13 +2,217 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cart_activity_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="5dp"
     tools:context=".CartActivity">
+
     <TextView
+        android:id="@+id/empty_cart_mssg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="Cart"/>
+        android:text="Cart is Empty."
+        android:textSize="15sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_list_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/bill_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bill Details"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:background="@color/goodGrey"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/item_total_text"
+                android:layout_below="@id/bill_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Total"
+                android:textSize="18sp"
+                android:textColor="@color/goodBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_total"
+                android:layout_below="@id/bill_details"
+                android:layout_toRightOf="@id/item_total_text"
+                android:text="₹0.00"
+                android:textSize="18sp"
+                android:gravity="right"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/item_delivery_text"
+                android:layout_below="@id/item_total_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Fee"
+                android:textSize="18sp"
+                android:textColor="@color/goodBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_delivery"
+                android:layout_below="@id/item_total_text"
+                android:layout_toRightOf="@id/item_delivery_text"
+                android:text="₹0.00"
+                android:textSize="18sp"
+                android:gravity="right"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/item_discount_text"
+                android:layout_below="@id/item_delivery_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discount"
+                android:textSize="18sp"
+                android:textColor="@color/goodBlack"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_discount"
+                android:layout_below="@id/item_delivery_text"
+                android:layout_toRightOf="@id/item_discount_text"
+                android:text="₹0.00"
+                android:textSize="18sp"
+                android:gravity="right"
+                android:layout_alignParentRight="true"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:id="@+id/apply_coupon_bttn"
+                android:layout_below="@id/item_discount_text"
+                android:text="Apply Coupon"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/neue_haas_grotesk_medium_65"
+                android:backgroundTint="@color/goodGrey"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                />
+
+            <TextView
+                android:id="@+id/item_taxes_text"
+                android:layout_below="@id/apply_coupon_bttn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Taxes and Charges"
+                android:textSize="18sp"
+                android:fontFamily="@font/neue_haas_grotesk_medium_65"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/item_taxes"
+                android:layout_below="@id/apply_coupon_bttn"
+                android:layout_toRightOf="@id/item_taxes_text"
+                android:text="₹0.00"
+                android:textSize="18sp"
+                android:gravity="right"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:orientation="horizontal"
+            android:background="@color/goodGrey"
+            android:layout_alignParentBottom="true">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="1dp"
+                android:layout_margin="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:background="@color/betterGrey">
+
+                    <TextView
+                        android:id="@+id/total_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To Pay: "
+                        android:textSize="12sp"
+                        />
+                    <TextView
+                        android:id="@+id/total_price"
+                        android:layout_below="@+id/total_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹0.00"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/clear_cart_bttn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:textSize="15sp"
+                android:text="Clear Cart"
+                android:textColor="#363535"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:backgroundTint="@color/betterGrey"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/place_order_bttn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Place Order"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:backgroundTint="@color/betterGreen"/>
+
+    </LinearLayout>
 
 </RelativeLayout>

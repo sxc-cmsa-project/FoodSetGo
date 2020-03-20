@@ -29,7 +29,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Aminia"
+                android:textAlignment="center"
+                android:text="Gupta Brothers"
                 android:textSize="15sp"
                 android:textColor="@color/goodBlack"
                 android:fontFamily="@font/neue_haas_grotesk_medium_65"/>

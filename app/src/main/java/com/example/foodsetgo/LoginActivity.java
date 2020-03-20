@@ -77,11 +77,8 @@ public class LoginActivity extends Fragment {
                 {
                     mDialog.show();
                     userTable.addValueEventListener(new ValueEventListener() {
-
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
-
-
                             if (dataSnapshot.child(phoneEditText.getText().toString()).exists())
                             {
                                 mDialog.dismiss();
@@ -99,9 +96,7 @@ public class LoginActivity extends Fragment {
 
                                 }
                                 else
-                                {
                                     Toast.makeText(getContext(), "Incorrect Password", Toast.LENGTH_SHORT).show();
-                                }
                             }
                             else
                             {
@@ -113,7 +108,6 @@ public class LoginActivity extends Fragment {
 
                         @Override
                         public void onCancelled(DatabaseError databaseError) {
-
                         }
                     });
                 }
